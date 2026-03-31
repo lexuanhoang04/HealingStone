@@ -60,14 +60,19 @@ def discover_mesh_files(input_dir: str | Path, extensions: List[str]) -> List[Pa
     return sorted(p for p in input_dir.iterdir() if p.suffix.lower() in exts)
 
 
-def setup_logging(config: Dict[str, Any], log_dir: str | Path) -> None:
+def setup_logging(
+    config: Dict[str, Any],
+    log_dir: str | Path,
+    log_filename: str = "pipeline.log",
+) -> None:
     """Configure the root logger with a console handler and a file handler.
 
     Calling this multiple times is safe: existing handlers are cleared first.
 
     Args:
         config: pipeline config dict (reads config["logging"]["level"]).
-        log_dir: directory where pipeline.log is written.
+        log_dir: directory where the log file is written.
+        log_filename: name of the log file (default "pipeline.log").
     """
     log_dir = Path(log_dir)
     log_dir.mkdir(parents=True, exist_ok=True)
@@ -89,7 +94,7 @@ def setup_logging(config: Dict[str, Any], log_dir: str | Path) -> None:
     ch.setFormatter(formatter)
     root.addHandler(ch)
 
-    fh = logging.FileHandler(log_dir / "pipeline.log", mode="a", encoding="utf-8")
+    fh = logging.FileHandler(log_dir / log_filename, mode="a", encoding="utf-8")
     fh.setLevel(level)
     fh.setFormatter(formatter)
     root.addHandler(fh)

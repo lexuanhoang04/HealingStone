@@ -101,23 +101,72 @@ def _run_icp(
     )
 
 
-def _overlap_score(icp_fitness: float, icp_rmse: float, max_corr_dist: float) -> float:
-    """Compute overlap_score per design_v2 §C.
+def _pair_collision_fraction(
+    src_pcd: o3d.geometry.PointCloud,
+    tgt_pcd: o3d.geometry.PointCloud,
+    transform: np.ndarray,
+    collision_dist: float,
+) -> float:
+    """Compute the fraction of source points within collision_dist of target
+    after applying the proposed transform.
 
-    overlap_score = icp_fitness * max(0, 1 - icp_rmse / max_corr_dist)
+    A real fracture match contacts only at the fracture face, so collision_fraction
+    is at most the fraction of total surface that the fracture face occupies
+    (typically 0.10–0.30). Interpenetrating false matches produce values >> 0.35.
 
-    Rewards both coverage (icp_fitness) and precision (low icp_rmse).
-    Does NOT penalise unmatched regions — they represent missing material.
+    Args:
+        src_pcd: source point cloud (untransformed).
+        tgt_pcd: target point cloud (in its original frame).
+        transform: 4x4 proposed transform (maps src to tgt frame).
+        collision_dist: proximity threshold in mm.
+
+    Returns:
+        Fraction in [0, 1].
+    """
+    pts = np.asarray(src_pcd.points)
+    pts_t = (transform[:3, :3] @ pts.T + transform[:3, 3:4]).T
+
+    src_t = o3d.geometry.PointCloud()
+    src_t.points = o3d.utility.Vector3dVector(pts_t)
+
+    reg = o3d.pipelines.registration.evaluate_registration(
+        src_t, tgt_pcd, collision_dist, np.eye(4),
+    )
+    return float(reg.fitness)
+
+
+def _overlap_score(
+    icp_fitness: float,
+    icp_rmse: float,
+    max_corr_dist: float,
+    high_fitness_threshold: float = 0.65,
+) -> float:
+    """Compute overlap_score per design_v2 §C with a high-fitness penalty.
+
+    Base formula:
+        overlap_score = icp_fitness * max(0, 1 - icp_rmse / max_corr_dist)
+
+    High-fitness penalty:
+        For real heritage fragments, icp_fitness > 0.65 is suspiciously high —
+        it suggests a false match (flat face aligned to flat face) rather than
+        a true fracture match. A soft penalty down-ranks such pairs:
+        if icp_fitness > high_fitness_threshold:
+            score *= (1 - 0.5 * (icp_fitness - high_fitness_threshold))
 
     Args:
         icp_fitness: fraction of source points with correspondence <= max_corr_dist.
         icp_rmse: mean distance of matched correspondences (mm).
         max_corr_dist: ICP max_correspondence_distance (mm).
+        high_fitness_threshold: icp_fitness above this is penalised (default 0.65).
 
     Returns:
         Scalar overlap_score in [0, 1].
     """
-    return float(icp_fitness * max(0.0, 1.0 - icp_rmse / max_corr_dist))
+    score = float(icp_fitness * max(0.0, 1.0 - icp_rmse / max_corr_dist))
+    if icp_fitness > high_fitness_threshold:
+        excess = icp_fitness - high_fitness_threshold
+        score *= max(0.0, 1.0 - 0.5 * excess)
+    return score
 
 
 # ---------------------------------------------------------------------------
@@ -137,9 +186,14 @@ def register_pair(
 ) -> Optional[Dict[str, Any]]:
     """Register one (source, target) fragment pair via RANSAC then ICP.
 
-    RANSAC provides a global initialisation that is rotation-invariant (no
-    canonical axis assumed). ICP refines the transform locally. If ICP fitness
-    drops below RANSAC fitness the RANSAC transform is kept (design_v2 §H).
+    After ICP, a collision check is performed on the proposed transform.
+    If the fraction of source points within collision_distance_mm of the target
+    exceeds collision_reject_threshold, the pair is rejected as physically
+    implausible (interpenetrating fragments).
+
+    A real fracture match contacts only at the fracture face (collision_fraction
+    typically 0.10–0.30). A false face-to-face interpenetration produces
+    collision_fraction > 0.40.
 
     Args:
         src: source ProcessedFragment.
@@ -150,8 +204,9 @@ def register_pair(
         config: pipeline config dict.
 
     Returns:
-        Dict with transform, ransac_fitness, icp_fitness, icp_rmse, overlap_score;
-        or None if the pair is below the min_fitness_to_keep threshold.
+        Dict with transform, ransac_fitness, icp_fitness, icp_rmse,
+        overlap_score, collision_fraction, is_near_duplicate;
+        or None if rejected (below fitness threshold or implausible collision).
     """
     ransac_result = _run_ransac(src_down, tgt_down, src_fpfh, tgt_fpfh, config)
     if ransac_result is None:
@@ -178,6 +233,25 @@ def register_pair(
         icp_fitness = float(ransac_result.fitness)
         icp_rmse = float(ransac_result.inlier_rmse)
 
+    # --- Collision check: reject physically implausible interpenetration ---
+    pairwise_cfg = config.get("pairwise", {})
+    collision_dist = float(config["assembly"].get("collision_distance_mm", 2.0))
+    collision_reject = float(pairwise_cfg.get("collision_reject_threshold", 0.35))
+    near_dup_thresh = float(pairwise_cfg.get("near_duplicate_fitness_threshold", 0.85))
+
+    collision_frac = _pair_collision_fraction(src_surface, tgt_surface, transform, collision_dist)
+
+    is_near_duplicate = (icp_fitness >= near_dup_thresh) and (collision_frac >= 0.5)
+
+    if collision_frac > collision_reject:
+        label = "NEAR-DUPLICATE" if is_near_duplicate else "COLLISION-REJECTED"
+        logger.info(
+            "  %s  (%s, %s)  icp_fit=%.3f  collision=%.3f > %.2f",
+            label, src.name[-8:], tgt.name[-8:],
+            icp_fitness, collision_frac, collision_reject,
+        )
+        return None
+
     max_corr = float(config["icp"]["max_correspondence_distance"])
     score = _overlap_score(icp_fitness, icp_rmse, max_corr)
 
@@ -189,6 +263,8 @@ def register_pair(
         "icp_fitness": icp_fitness,
         "icp_rmse": icp_rmse,
         "overlap_score": score,
+        "collision_fraction": collision_frac,
+        "is_near_duplicate": is_near_duplicate,
     }
 
 
@@ -259,11 +335,12 @@ def compute_pairwise_matches(
         if result is not None:
             results.append(result)
             logger.info(
-                "  [%3d/%3d]  %-20s x %-20s  fit=%.3f  rmse=%5.2f  score=%.3f  %.1fs",
+                "  [%3d/%3d]  %-20s x %-20s  fit=%.3f  rmse=%5.2f  score=%.3f  coll=%.3f  %.1fs",
                 pair_idx + 1, n_pairs,
                 fi.name.split("_FR_")[-1] if "_FR_" in fi.name else fi.name[-10:],
                 fj.name.split("_FR_")[-1] if "_FR_" in fj.name else fj.name[-10:],
-                result["icp_fitness"], result["icp_rmse"], result["overlap_score"], elapsed,
+                result["icp_fitness"], result["icp_rmse"], result["overlap_score"],
+                result["collision_fraction"], elapsed,
             )
         else:
             logger.debug(

@@ -1,5 +1,9 @@
 seed: 42
 
+# Set to true to write directly into output_dir (no timestamped subdirectory).
+# Default false: each run creates outputs/runs/YYYY-MM-DD_HH-MM-SS/
+disable_run_timestamp: false
+
 paths:
   input_3d_dir: data/raw/3d
   processed_dir: data/processed
@@ -19,13 +23,14 @@ mesh:
   use_cache: true
 
 # Candidate matching surface extraction (Phase 2)
-# mode: full_surface  -> use entire decimated mesh PCD (robust default)
-# mode: candidate_surface -> use curvature+colour to find fracture-like regions
+# mode: candidate_surface -> curvature-based fracture detection (ACTIVE)
+# mode: full_surface      -> entire surface (faster but less focused, use as fallback)
 matching_surface:
-  mode: full_surface
-  # Parameters below only active when mode: candidate_surface
-  normal_variance_percentile: 25
-  color_std_percentile: 30           # ignored if mesh has no colours
+  mode: candidate_surface
+  # normal_variance_percentile: lower = only flattest regions; 40 gives ~40% of surface.
+  # Fracture faces are typically 25-45% of total surface area on these fragments.
+  normal_variance_percentile: 40
+  color_std_percentile: 30           # kept but NOT used as hard filter (soft weight only)
   min_region_fraction: 0.05          # fallback to full_surface if below this
 
 fpfh:
@@ -35,14 +40,25 @@ fpfh:
 
 # Pairwise pair selection
 pairwise:
-  max_pairs_to_keep: 30               # keep top-N pairs by overlap_score
+  max_pairs_to_keep: 30               # keep top-N pairs by overlap_score after all filters
+
+  # Collision-based rejection: if the proposed transform causes more than this
+  # fraction of source points to be within collision_distance_mm of the target,
+  # the pair is REJECTED as physically implausible (interpenetration).
+  # Real fracture matches: collision_fraction < 0.30 (only the contact face).
+  # False matches (face-to-face interpenetration): collision_fraction > 0.50.
+  collision_reject_threshold: 0.35
+
+  # Near-duplicate flag: if icp_fitness exceeds this AND collision > 0.5,
+  # the pair is flagged as a likely duplicate scan of the same fragment.
+  near_duplicate_fitness_threshold: 0.85
 
 # Pairwise registration (Phase 4)
 ransac:
   max_correspondence_distance: 4.0   # mm
   max_iterations: 100000
   confidence: 0.999
-  min_fitness_to_keep: 0.1           # low threshold — missing material reduces fitness
+  min_fitness_to_keep: 0.15          # raised from 0.1 — reduces weak false positives
   n_workers: 4
 
 # ICP refinement after RANSAC (Phase 4 refinement step)
@@ -59,7 +75,8 @@ assembly:
   strategy: greedy_mst
   anchor_by: largest                 # largest | index
   anchor_index: 0                    # used only if anchor_by: index
-  min_score_threshold: 0.15          # lower than "perfect" — missing material expected
+  min_score_threshold: 0.20          # raised from 0.15 — only keep reasonably confident edges
+  slab_bonus_weight: 0.10            # soft upward nudge for slab-like fragment pairs (stele prior)
   collision_distance_mm: 2.0
   validate_against_placed: true      # Phase 6: cross-validate against nearby placed frags
   proximity_check_radius: 50.0       # mm — search radius for cross-validation neighbours

@@ -149,6 +149,35 @@ def compute_global_metrics(
                 "note": "possible misplacement" if frac > 0.20 else "minor contact",
             })
 
+    # Physical plausibility: count pairs whose in-assembly collision is acceptable
+    n_adjacent = len(checked_pairs)
+    n_plausible = sum(
+        1 for flag in collision_flags if flag["collision_fraction"] <= 0.05
+    )
+    n_implausible = sum(
+        1 for flag in collision_flags if flag["collision_fraction"] > 0.20
+    )
+    # A run is physically plausible if no pair has collision_fraction > 0.20
+    is_physically_plausible = (n_implausible == 0) and (n_placed > 0)
+
+    # Stele shape metrics on the assembled bounding box
+    # A Mayan stele is a tall slab: thin in one axis, elongated in another.
+    # slab_ratio   = min_extent / max_extent  (< 0.5 → slab-like)
+    # elongation   = max_extent / mid_extent  (> 1.3 → elongated)
+    # is_stele_like: slab_ratio < 0.5 AND elongation > 1.3
+    slab_ratio: Optional[float] = None
+    elongation_ratio: Optional[float] = None
+    is_stele_like: Optional[bool] = None
+    if assembly_bbox_mm and len(assembly_bbox_mm) == 3:
+        extents = sorted(assembly_bbox_mm)        # [min, mid, max]
+        if extents[2] > 1e-3:
+            slab_ratio = round(extents[0] / extents[2], 4)
+            elongation_ratio = round(extents[2] / extents[1], 4) if extents[1] > 1e-3 else None
+            is_stele_like = (slab_ratio < 0.5) and (elongation_ratio is not None and elongation_ratio > 1.3)
+
+    # Pull diagnostics from assembly if present
+    diag = assembly.get("diagnostics", {})
+
     return {
         "fragments_placed": n_placed,
         "total_fragments": n_total,
@@ -159,7 +188,22 @@ def compute_global_metrics(
             [round(v, 2) for v in assembly_bbox_mm] if assembly_bbox_mm else None
         ),
         "max_collision_fraction": round(max_collision, 4),
+        "n_adjacent_pairs_checked": n_adjacent,
+        "n_implausible_pairs": n_implausible,
+        "is_physically_plausible": is_physically_plausible,
         "collision_flags": collision_flags,
+        "n_disconnected_components": diag.get("n_components", 1),
+        "low_support_placements": diag.get("low_support_placements", []),
+        "stele_shape": {
+            "slab_ratio": slab_ratio,
+            "elongation_ratio": elongation_ratio,
+            "is_stele_like": is_stele_like,
+            "note": (
+                "slab_ratio = min/max extent (< 0.5 = slab); "
+                "elongation = max/mid extent (> 1.3 = tall); "
+                "both required for is_stele_like"
+            ),
+        },
         "fitness_context": (
             "heritage_fragment — fitness 0.15-0.65 is expected with missing material; "
             "standard robotics thresholds (>0.8) do not apply"
@@ -199,6 +243,8 @@ def summarize_results(
             "icp_fitness": round(float(r.get("icp_fitness", 0.0)), 4),
             "icp_rmse_mm": round(float(r.get("icp_rmse", 0.0)), 4),
             "overlap_score": round(float(r.get("overlap_score", 0.0)), 4),
+            "collision_fraction": round(float(r.get("collision_fraction", 0.0)), 4),
+            "is_near_duplicate": bool(r.get("is_near_duplicate", False)),
         }
         for r in pairwise_results
     ]
