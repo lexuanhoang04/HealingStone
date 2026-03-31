@@ -1,0 +1,383 @@
+{
+  "global": {
+    "fragments_placed": 17,
+    "total_fragments": 17,
+    "placement_rate": 1.0,
+    "mean_icp_fitness": 0.7951,
+    "mean_icp_rmse_mm": 1.6593,
+    "assembly_bounding_box_mm": [
+      1093.08,
+      883.51,
+      725.2
+    ],
+    "max_collision_fraction": 1.0,
+    "collision_flags": [
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_13_F_01_R_01",
+        "collision_fraction": 1.0,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_15_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+        "collision_fraction": 0.7902,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+        "collision_fraction": 0.6459,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_11_F_01_R_01",
+        "collision_fraction": 0.5675,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_08_F_01_R_01",
+        "collision_fraction": 0.4697,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_10_F_01_R_01",
+        "collision_fraction": 0.459,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.4938,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+        "collision_fraction": 0.5137,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+        "collision_fraction": 0.5085,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_15_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.3029,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+        "collision_fraction": 0.5129,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+        "collision_fraction": 0.2693,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+        "collision_fraction": 0.2709,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_12_F_01_R_01",
+        "collision_fraction": 0.3771,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.0754,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+        "collision_fraction": 0.2228,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.2329,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.2307,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_13_F_01_R_01",
+        "collision_fraction": 0.1638,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+        "collision_fraction": 0.0971,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_16_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.0814,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+        "collision_fraction": 0.0835,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+        "collision_fraction": 0.0857,
+        "note": "minor contact"
+      }
+    ],
+    "fitness_context": "heritage_fragment \u2014 fitness 0.15-0.65 is expected with missing material; standard robotics thresholds (>0.8) do not apply"
+  },
+  "pairwise": [
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_13_F_01_R_01",
+      "ransac_fitness": 1.0,
+      "icp_fitness": 1.0,
+      "icp_rmse_mm": 0.6969,
+      "overlap_score": 0.7677
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_15_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+      "ransac_fitness": 0.8832,
+      "icp_fitness": 0.9091,
+      "icp_rmse_mm": 1.371,
+      "overlap_score": 0.4937
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+      "ransac_fitness": 0.7555,
+      "icp_fitness": 0.7832,
+      "icp_rmse_mm": 1.5097,
+      "overlap_score": 0.389
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_11_F_01_R_01",
+      "ransac_fitness": 0.6162,
+      "icp_fitness": 0.7914,
+      "icp_rmse_mm": 1.773,
+      "overlap_score": 0.3237
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_08_F_01_R_01",
+      "ransac_fitness": 0.5159,
+      "icp_fitness": 0.7071,
+      "icp_rmse_mm": 1.82,
+      "overlap_score": 0.2781
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_10_F_01_R_01",
+      "ransac_fitness": 0.5524,
+      "icp_fitness": 0.6108,
+      "icp_rmse_mm": 1.6527,
+      "overlap_score": 0.2743
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.7666,
+      "icp_fitness": 0.7666,
+      "icp_rmse_mm": 1.9995,
+      "overlap_score": 0.2556
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+      "ransac_fitness": 0.7751,
+      "icp_fitness": 0.7751,
+      "icp_rmse_mm": 2.0209,
+      "overlap_score": 0.253
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+      "ransac_fitness": 0.813,
+      "icp_fitness": 0.813,
+      "icp_rmse_mm": 2.0899,
+      "overlap_score": 0.2466
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_15_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.8405,
+      "icp_fitness": 0.8405,
+      "icp_rmse_mm": 2.1265,
+      "overlap_score": 0.2447
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_16_F_01_R_01",
+      "ransac_fitness": 0.7073,
+      "icp_fitness": 0.7073,
+      "icp_rmse_mm": 2.0678,
+      "overlap_score": 0.2198
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+      "ransac_fitness": 0.8094,
+      "icp_fitness": 0.8094,
+      "icp_rmse_mm": 2.216,
+      "overlap_score": 0.2115
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+      "ransac_fitness": 0.8474,
+      "icp_fitness": 0.8474,
+      "icp_rmse_mm": 2.3062,
+      "overlap_score": 0.196
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_12_F_01_R_01",
+      "ransac_fitness": 0.7358,
+      "icp_fitness": 0.7358,
+      "icp_rmse_mm": 2.3327,
+      "overlap_score": 0.1637
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.3066,
+      "icp_fitness": 0.3125,
+      "icp_rmse_mm": 1.4805,
+      "overlap_score": 0.1583
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.266,
+      "icp_fitness": 0.2811,
+      "icp_rmse_mm": 1.3661,
+      "overlap_score": 0.1531
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.6005,
+      "icp_fitness": 0.6005,
+      "icp_rmse_mm": 2.2535,
+      "overlap_score": 0.1494
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.5763,
+      "icp_fitness": 0.5763,
+      "icp_rmse_mm": 2.3376,
+      "overlap_score": 0.1272
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_09_F_01_R_01",
+      "ransac_fitness": 0.6036,
+      "icp_fitness": 0.6036,
+      "icp_rmse_mm": 2.391,
+      "overlap_score": 0.1225
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_13_F_01_R_01",
+      "ransac_fitness": 0.3302,
+      "icp_fitness": 0.3302,
+      "icp_rmse_mm": 1.9787,
+      "overlap_score": 0.1124
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_10_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_11_F_01_R_01",
+      "ransac_fitness": 0.1774,
+      "icp_fitness": 0.2483,
+      "icp_rmse_mm": 1.7866,
+      "overlap_score": 0.1004
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+      "ransac_fitness": 0.3031,
+      "icp_fitness": 0.3031,
+      "icp_rmse_mm": 2.1305,
+      "overlap_score": 0.0879
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_16_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.2205,
+      "icp_fitness": 0.2205,
+      "icp_rmse_mm": 2.0865,
+      "overlap_score": 0.0672
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.2968,
+      "icp_fitness": 0.2968,
+      "icp_rmse_mm": 2.3408,
+      "overlap_score": 0.0652
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.3018,
+      "icp_fitness": 0.3018,
+      "icp_rmse_mm": 2.3622,
+      "overlap_score": 0.0642
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_08_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_10_F_01_R_01",
+      "ransac_fitness": 0.1375,
+      "icp_fitness": 0.1412,
+      "icp_rmse_mm": 1.7582,
+      "overlap_score": 0.0584
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.1017,
+      "icp_fitness": 0.1047,
+      "icp_rmse_mm": 1.4495,
+      "overlap_score": 0.0541
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_02_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_11_F_01_R_01",
+      "ransac_fitness": 0.1281,
+      "icp_fitness": 0.1281,
+      "icp_rmse_mm": 2.4271,
+      "overlap_score": 0.0245
+    }
+  ],
+  "refinement_method": "no_refinement"
+}

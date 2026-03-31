@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-03-31_01-15-22",
+  "run_dir": "outputs/runs/2026-03-31_01-15-22",
+  "elapsed_seconds": 196.3,
+  "fragments_placed": 17,
+  "total_fragments": 17,
+  "placement_rate": 1.0,
+  "mean_icp_fitness": 0.3329,
+  "mean_icp_rmse_mm": 1.1917,
+  "max_collision_fraction": 0.2376,
+  "n_implausible_pairs": 1,
+  "is_physically_plausible": false,
+  "n_disconnected_components": 16,
+  "low_support_placements": [],
+  "stele_shape": {
+    "slab_ratio": 0.4313,
+    "elongation_ratio": 1.5263,
+    "is_stele_like": true,
+    "note": "slab_ratio = min/max extent (< 0.5 = slab); elongation = max/mid extent (> 1.3 = tall); both required for is_stele_like"
+  }
+}

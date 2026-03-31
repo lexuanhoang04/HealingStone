@@ -1,0 +1,62 @@
+seed: 42
+disable_run_timestamp: false
+paths:
+  input_3d_dir: data/raw/3d
+  processed_dir: data/processed
+  output_dir: outputs
+mesh:
+  supported_extensions:
+  - .ply
+  - .obj
+  voxel_size: 2.0
+  normals_radius: 10.0
+  normals_max_nn: 30
+  sample_points: 50000
+  sample_method: poisson_disk
+  use_cache: true
+matching_surface:
+  mode: full_surface
+  normal_variance_percentile: 25
+  color_std_percentile: 30
+  min_region_fraction: 0.05
+fpfh:
+  voxel_size: 2.0
+  radius: 10.0
+  max_nn: 100
+pairwise:
+  max_pairs_to_keep: 30
+ransac:
+  max_correspondence_distance: 4.0
+  max_iterations: 100000
+  confidence: 0.999
+  min_fitness_to_keep: 0.1
+  n_workers: 4
+icp:
+  run_icp: true
+  type: point_to_plane
+  max_correspondence_distance: 3.0
+  max_iterations: 50
+assembly:
+  strategy: greedy_mst
+  anchor_by: largest
+  anchor_index: 0
+  min_score_threshold: 0.15
+  collision_distance_mm: 2.0
+  validate_against_placed: true
+  proximity_check_radius: 50.0
+  cross_validation_min_fitness: 0.1
+  cross_validation_collision_threshold: 0.5
+refine:
+  run_refinement: false
+  max_correspondence_distance: 3.0
+  max_iterations: 30
+evaluation:
+  run_synthetic_evaluation: false
+  synthetic_rotation_range_deg: 180
+logging:
+  level: INFO
+plots:
+  save_pairwise_heatmap: true
+  save_fragment_size_plot: true
+  save_assembly_graph: true
+  save_assembly_preview: true

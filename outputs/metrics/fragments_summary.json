@@ -1,0 +1,342 @@
+[
+  {
+    "name": "NAR_ST_43B_FR_01_F_01_R_02",
+    "num_vertices_raw": 11860704,
+    "num_triangles_raw": 23644524,
+    "num_vertices_decimated": 227622,
+    "num_triangles_decimated": 467139,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      643.169969811554,
+      357.1338238211239,
+      333.2947849360379
+    ],
+    "bbox_diagonal_mm": 807.65,
+    "center_mm": [
+      193.40740031374318,
+      91.68203146317425,
+      -134.26924113793808
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_02_F_01_R_01",
+    "num_vertices_raw": 12950276,
+    "num_triangles_raw": 25900514,
+    "num_vertices_decimated": 254816,
+    "num_triangles_decimated": 522100,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      611.5744683016343,
+      406.1594738430447,
+      325.6188307542067
+    ],
+    "bbox_diagonal_mm": 803.13,
+    "center_mm": [
+      -199.35590020022943,
+      130.83663813273114,
+      -119.95801778940054
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_03_F_01_R_01",
+    "num_vertices_raw": 10109479,
+    "num_triangles_raw": 20218428,
+    "num_vertices_decimated": 204723,
+    "num_triangles_decimated": 428367,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      584.7422096252442,
+      514.7739275379454,
+      436.46677291396196
+    ],
+    "bbox_diagonal_mm": 892.98,
+    "center_mm": [
+      -116.20874824523926,
+      124.76564489957788,
+      -198.10169304306393
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_04_F_01_R_01",
+    "num_vertices_raw": 7764206,
+    "num_triangles_raw": 15513165,
+    "num_vertices_decimated": 147035,
+    "num_triangles_decimated": 303471,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      595.1040805673854,
+      392.4351417228273,
+      253.62870597393507
+    ],
+    "bbox_diagonal_mm": 756.63,
+    "center_mm": [
+      -171.2344445213277,
+      99.88502185295754,
+      -71.30172974353307
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_05_F_01_R_01",
+    "num_vertices_raw": 12823848,
+    "num_triangles_raw": 25635427,
+    "num_vertices_decimated": 255305,
+    "num_triangles_decimated": 529556,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      671.0168513000569,
+      653.1511490685599,
+      241.64548527172633
+    ],
+    "bbox_diagonal_mm": 967.09,
+    "center_mm": [
+      -163.30429017910836,
+      235.57792089098976,
+      -119.12486020837511
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_06_F_01_R_01",
+    "num_vertices_raw": 9179652,
+    "num_triangles_raw": 18356468,
+    "num_vertices_decimated": 167211,
+    "num_triangles_decimated": 342717,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      402.5253647867838,
+      499.2276633225478,
+      239.86123907064137
+    ],
+    "bbox_diagonal_mm": 684.68,
+    "center_mm": [
+      91.01574473063151,
+      189.5635453806295,
+      -103.72103937613338
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_07_F_01_R_01",
+    "num_vertices_raw": 61311,
+    "num_triangles_raw": 122618,
+    "num_vertices_decimated": 1318,
+    "num_triangles_decimated": 2751,
+    "num_pcd_points": 1318,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      64.64036887032645,
+      22.82662371155483,
+      33.270390900002376
+    ],
+    "bbox_diagonal_mm": 76.2,
+    "center_mm": [
+      -1.176237378801618,
+      -2.6733330374449684,
+      -13.887297233095921
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_08_F_01_R_01",
+    "num_vertices_raw": 5251221,
+    "num_triangles_raw": 10476450,
+    "num_vertices_decimated": 91840,
+    "num_triangles_decimated": 190578,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      448.5495050112406,
+      378.64668810334194,
+      146.1002453757657
+    ],
+    "bbox_diagonal_mm": 604.91,
+    "center_mm": [
+      96.34839704831442,
+      50.48881217678722,
+      -62.975173671709165
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_09_F_01_R_01",
+    "num_vertices_raw": 6384319,
+    "num_triangles_raw": 12762988,
+    "num_vertices_decimated": 122608,
+    "num_triangles_decimated": 251242,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      737.8906013233864,
+      188.83116671096445,
+      164.05998525855304
+    ],
+    "bbox_diagonal_mm": 779.14,
+    "center_mm": [
+      219.41231233349308,
+      3.095117824022161,
+      -85.68860964552387
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_10_F_01_R_01",
+    "num_vertices_raw": 3990451,
+    "num_triangles_raw": 7980896,
+    "num_vertices_decimated": 73711,
+    "num_triangles_decimated": 151651,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      583.3343780278225,
+      134.75888939464795,
+      143.21923312300117
+    ],
+    "bbox_diagonal_mm": 615.59,
+    "center_mm": [
+      188.91501598283355,
+      23.289085290011236,
+      -48.231052020344116
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_11_F_01_R_01",
+    "num_vertices_raw": 6885553,
+    "num_triangles_raw": 13767902,
+    "num_vertices_decimated": 129789,
+    "num_triangles_decimated": 268967,
+    "num_pcd_points": 50000,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      204.5842477431109,
+      670.9171401243159,
+      241.00810789884628
+    ],
+    "bbox_diagonal_mm": 741.67,
+    "center_mm": [
+      -4.980390997871417,
+      242.37988603561317,
+      -112.73727457051024
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_12_F_01_R_01",
+    "num_vertices_raw": 155260,
+    "num_triangles_raw": 310516,
+    "num_vertices_decimated": 2864,
+    "num_triangles_decimated": 5881,
+    "num_pcd_points": 2864,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      64.99188501758897,
+      62.17276193830702,
+      36.93544855526707
+    ],
+    "bbox_diagonal_mm": 97.23,
+    "center_mm": [
+      1.1190573791001288,
+      8.031015385521783,
+      -5.626894352529914
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_13_F_01_R_01",
+    "num_vertices_raw": 61311,
+    "num_triangles_raw": 122618,
+    "num_vertices_decimated": 1318,
+    "num_triangles_decimated": 2751,
+    "num_pcd_points": 1318,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      64.64036887032645,
+      22.82662371155483,
+      33.270390900002376
+    ],
+    "bbox_diagonal_mm": 76.2,
+    "center_mm": [
+      -1.176237378801618,
+      -2.6733330374449684,
+      -13.887297233095921
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_14_F_01_R_01",
+    "num_vertices_raw": 65056,
+    "num_triangles_raw": 130112,
+    "num_vertices_decimated": 1288,
+    "num_triangles_decimated": 2708,
+    "num_pcd_points": 1288,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      52.65025235847993,
+      37.71028586551219,
+      32.03585822328979
+    ],
+    "bbox_diagonal_mm": 72.25,
+    "center_mm": [
+      0.20999044992706928,
+      -4.457009492040586,
+      -2.8305607291804993
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_15_F_01_R_01",
+    "num_vertices_raw": 16327,
+    "num_triangles_raw": 32652,
+    "num_vertices_decimated": 16327,
+    "num_triangles_decimated": 32652,
+    "num_pcd_points": 16327,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      29.59160327911377,
+      16.67474252730608,
+      15.803651809692383
+    ],
+    "bbox_diagonal_mm": 37.46,
+    "center_mm": [
+      -2.180692195892334,
+      -8.245396222919226,
+      -16.21638584136963
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_16_F_01_R_01",
+    "num_vertices_raw": 195698,
+    "num_triangles_raw": 391394,
+    "num_vertices_decimated": 3831,
+    "num_triangles_decimated": 7949,
+    "num_pcd_points": 3831,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      83.16366713701669,
+      71.14769890194847,
+      36.07942488342523
+    ],
+    "bbox_diagonal_mm": 115.24,
+    "center_mm": [
+      2.4462604561498615,
+      -6.869350342523482,
+      -16.923273550719024
+    ]
+  },
+  {
+    "name": "NAR_ST_43B_FR_17_F_01_R_01",
+    "num_vertices_raw": 54192,
+    "num_triangles_raw": 108380,
+    "num_vertices_decimated": 1157,
+    "num_triangles_decimated": 2403,
+    "num_pcd_points": 1157,
+    "has_colors": true,
+    "bbox_extent_mm": [
+      34.769654874677784,
+      29.69087829200589,
+      33.846823425726456
+    ],
+    "bbox_diagonal_mm": 56.89,
+    "center_mm": [
+      0.5479511812135769,
+      -8.671205904045884,
+      -31.68976036743684
+    ]
+  }
+]

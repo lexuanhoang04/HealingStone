@@ -1,0 +1,535 @@
+{
+  "assembly_method": "greedy_mst",
+  "anchor_fragment": "NAR_ST_43B_FR_05_F_01_R_01",
+  "fragments": {
+    "NAR_ST_43B_FR_01_F_01_R_02": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_02_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_03_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_04_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_05_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_06_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_07_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_08_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_09_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_10_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_11_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_12_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_13_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_15_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_14_F_01_R_01": {
+      "transform": [
+        [
+          0.9987955207181879,
+          0.04772831678571361,
+          0.011380490766421886,
+          -2.9029548297638006
+        ],
+        [
+          -0.04834517454688395,
+          0.9968988405584058,
+          0.062092236159905646,
+          3.177991659913954
+        ],
+        [
+          -0.008381640132658432,
+          -0.06256763916042135,
+          0.998005530364725,
+          -18.75556153653431
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "placed",
+      "pairwise_fitness": 0.33294117647058824,
+      "pairwise_rmse": 1.1917153872496822,
+      "placed_via": "NAR_ST_43B_FR_15_F_01_R_01",
+      "cross_validation_fitness": 0.28687888198757766
+    },
+    "NAR_ST_43B_FR_16_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    },
+    "NAR_ST_43B_FR_17_F_01_R_01": {
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "status": "sub_anchor",
+      "pairwise_fitness": null,
+      "pairwise_rmse": null
+    }
+  }
+}

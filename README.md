@@ -27,6 +27,27 @@ Optional flags:
 --output_dir /path/to/results
 ```
 
+## Using Custom Data
+
+To run on your own fragments, either:
+
+**Option A — edit `config.yaml`** (persistent):
+```yaml
+paths:
+  input_3d_dir: path/to/your/fragments   # folder of .ply / .obj files
+  processed_dir: path/to/cache           # where preprocessed point clouds are cached
+  output_dir: path/to/results
+```
+
+**Option B — pass flags at runtime** (one-off):
+```bash
+python run_pipeline.py --config config.yaml \
+  --input_dir /path/to/your/fragments \
+  --output_dir /path/to/results
+```
+
+Runtime flags override `config.yaml`. Add `--no_cache` to skip any cached preprocessing from a previous run on different data.
+
 ---
 
 ## Results

@@ -1,0 +1,212 @@
+{
+  "global": {
+    "fragments_placed": 17,
+    "total_fragments": 17,
+    "placement_rate": 1.0,
+    "mean_icp_fitness": 0.3329,
+    "mean_icp_rmse_mm": 1.1917,
+    "assembly_bounding_box_mm": [
+      1093.2,
+      716.25,
+      471.52
+    ],
+    "max_collision_fraction": 0.2376,
+    "n_adjacent_pairs_checked": 12,
+    "n_implausible_pairs": 1,
+    "is_physically_plausible": false,
+    "collision_flags": [
+      {
+        "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+        "collision_fraction": 0.2376,
+        "note": "possible misplacement"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+        "collision_fraction": 0.0646,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+        "collision_fraction": 0.1055,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.0895,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+        "collision_fraction": 0.085,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_11_F_01_R_01",
+        "collision_fraction": 0.1297,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+        "collision_fraction": 0.1009,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_09_F_01_R_01",
+        "collision_fraction": 0.1381,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_13_F_01_R_01",
+        "collision_fraction": 0.0828,
+        "note": "minor contact"
+      },
+      {
+        "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+        "fragment_b": "NAR_ST_43B_FR_12_F_01_R_01",
+        "collision_fraction": 0.1927,
+        "note": "minor contact"
+      }
+    ],
+    "n_disconnected_components": 16,
+    "low_support_placements": [],
+    "stele_shape": {
+      "slab_ratio": 0.4313,
+      "elongation_ratio": 1.5263,
+      "is_stele_like": true,
+      "note": "slab_ratio = min/max extent (< 0.5 = slab); elongation = max/mid extent (> 1.3 = tall); both required for is_stele_like"
+    },
+    "fitness_context": "heritage_fragment \u2014 fitness 0.15-0.65 is expected with missing material; standard robotics thresholds (>0.8) do not apply"
+  },
+  "pairwise": [
+    {
+      "fragment_a": "NAR_ST_43B_FR_14_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.3058,
+      "icp_fitness": 0.3329,
+      "icp_rmse_mm": 1.1917,
+      "overlap_score": 0.2007,
+      "collision_fraction": 0.2882,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_14_F_01_R_01",
+      "ransac_fitness": 0.3106,
+      "icp_fitness": 0.3664,
+      "icp_rmse_mm": 1.4857,
+      "overlap_score": 0.1849,
+      "collision_fraction": 0.298,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.3323,
+      "icp_fitness": 0.3687,
+      "icp_rmse_mm": 1.5045,
+      "overlap_score": 0.1838,
+      "collision_fraction": 0.2888,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.6458,
+      "icp_fitness": 0.6458,
+      "icp_rmse_mm": 2.2784,
+      "overlap_score": 0.1553,
+      "collision_fraction": 0.3434,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_13_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.6288,
+      "icp_fitness": 0.6288,
+      "icp_rmse_mm": 2.3011,
+      "overlap_score": 0.1465,
+      "collision_fraction": 0.3311,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_11_F_01_R_01",
+      "ransac_fitness": 0.7356,
+      "icp_fitness": 0.7356,
+      "icp_rmse_mm": 2.4918,
+      "overlap_score": 0.1193,
+      "collision_fraction": 0.312,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_15_F_01_R_01",
+      "ransac_fitness": 0.3085,
+      "icp_fitness": 0.3085,
+      "icp_rmse_mm": 1.9352,
+      "overlap_score": 0.1095,
+      "collision_fraction": 0.213,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_09_F_01_R_01",
+      "ransac_fitness": 0.6119,
+      "icp_fitness": 0.6119,
+      "icp_rmse_mm": 2.507,
+      "overlap_score": 0.1006,
+      "collision_fraction": 0.2468,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_13_F_01_R_01",
+      "ransac_fitness": 0.294,
+      "icp_fitness": 0.294,
+      "icp_rmse_mm": 2.1149,
+      "overlap_score": 0.0867,
+      "collision_fraction": 0.1749,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_07_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_12_F_01_R_01",
+      "ransac_fitness": 0.7136,
+      "icp_fitness": 0.7136,
+      "icp_rmse_mm": 2.645,
+      "overlap_score": 0.0817,
+      "collision_fraction": 0.2363,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_12_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.4049,
+      "icp_fitness": 0.4049,
+      "icp_rmse_mm": 2.4399,
+      "overlap_score": 0.0756,
+      "collision_fraction": 0.1846,
+      "is_near_duplicate": false
+    },
+    {
+      "fragment_a": "NAR_ST_43B_FR_16_F_01_R_01",
+      "fragment_b": "NAR_ST_43B_FR_17_F_01_R_01",
+      "ransac_fitness": 0.2333,
+      "icp_fitness": 0.2333,
+      "icp_rmse_mm": 2.3064,
+      "overlap_score": 0.0539,
+      "collision_fraction": 0.1237,
+      "is_near_duplicate": false
+    }
+  ],
+  "refinement_method": "no_refinement"
+}

@@ -1,0 +1,196 @@
+2026-03-31 00:37:53  INFO      __main__  ============================================================
+2026-03-31 00:37:53  INFO      __main__  Healing Stones reconstruction pipeline
+2026-03-31 00:37:53  INFO      __main__  Run timestamp : 2026-03-31_00-37-53
+2026-03-31 00:37:53  INFO      __main__  Run directory : outputs/runs/2026-03-31_00-37-53
+2026-03-31 00:37:53  INFO      __main__  Config file   : config.yaml
+2026-03-31 00:37:53  INFO      __main__  Input dir     : data/raw/3d
+2026-03-31 00:37:53  INFO      __main__  ============================================================
+2026-03-31 00:37:53  INFO      __main__  Config snapshot saved -> outputs/runs/2026-03-31_00-37-53/config.yaml
+2026-03-31 00:37:53  INFO      __main__  Random seed: 42
+2026-03-31 00:37:53  INFO      __main__  ============================================================
+2026-03-31 00:37:53  INFO      __main__  PHASE 0+1: load, decimate, preprocess
+2026-03-31 00:37:53  INFO      __main__  ============================================================
+2026-03-31 00:37:53  INFO      src.preprocess  Discovered 17 mesh file(s) in data/raw/3d
+2026-03-31 00:37:58  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_01_F_01_R_02.PLY               11860704 verts   23644524 tris  4.7s
+2026-03-31 00:38:03  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_02_F_01_R_01.PLY               12950276 verts   25900514 tris  5.1s
+2026-03-31 00:38:07  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_03_F_01_R_01.PLY               10109479 verts   20218428 tris  4.0s
+2026-03-31 00:38:10  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_04_F_01_R_01.PLY                7764206 verts   15513165 tris  3.0s
+2026-03-31 00:38:15  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_05_F_01_R_01.PLY               12823848 verts   25635427 tris  4.9s
+2026-03-31 00:38:18  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_06_F_01_R_01.PLY                9179652 verts   18356468 tris  3.6s
+2026-03-31 00:38:18  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_07_F_01_R_01.PLY                  61311 verts     122618 tris  0.0s
+2026-03-31 00:38:21  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_08_F_01_R_01.PLY                5251221 verts   10476450 tris  2.1s
+2026-03-31 00:38:23  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_09_F_01_R_01.PLY                6384319 verts   12762988 tris  2.4s
+2026-03-31 00:38:24  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_10_F_01_R_01.PLY                3990451 verts    7980896 tris  1.5s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_11_F_01_R_01.PLY                6885553 verts   13767902 tris  2.6s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_12_F_01_R_01.PLY                 155260 verts     310516 tris  0.0s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_13_F_01_R_01.PLY                  61311 verts     122618 tris  0.0s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_14_F_01_R_01.PLY                  65056 verts     130112 tris  0.0s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_15_F_01_R_01.PLY                  16327 verts      32652 tris  0.0s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_16_F_01_R_01.PLY                 195698 verts     391394 tris  0.1s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded  NAR_ST_43B_FR_17_F_01_R_01.PLY                  54192 verts     108380 tris  0.0s
+2026-03-31 00:38:27  INFO      src.preprocess  Loaded 17/17 meshes successfully
+2026-03-31 00:38:27  INFO      src.preprocess  --- Processing 1/17: NAR_ST_43B_FR_01_F_01_R_02 ---
+2026-03-31 00:38:27  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_01_F_01_R_02                467139 tris
+2026-03-31 00:38:39  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_01_F_01_R_02           227622 verts  467139 tris  pcd=50000  colors=True   diag=807.6
+2026-03-31 00:38:39  INFO      src.preprocess  --- Processing 2/17: NAR_ST_43B_FR_02_F_01_R_01 ---
+2026-03-31 00:38:39  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_02_F_01_R_01                522100 tris
+2026-03-31 00:38:50  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_02_F_01_R_01           254816 verts  522100 tris  pcd=50000  colors=True   diag=803.1
+2026-03-31 00:38:50  INFO      src.preprocess  --- Processing 3/17: NAR_ST_43B_FR_03_F_01_R_01 ---
+2026-03-31 00:38:50  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_03_F_01_R_01                428367 tris
+2026-03-31 00:39:02  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_03_F_01_R_01           204723 verts  428367 tris  pcd=50000  colors=True   diag=893.0
+2026-03-31 00:39:02  INFO      src.preprocess  --- Processing 4/17: NAR_ST_43B_FR_04_F_01_R_01 ---
+2026-03-31 00:39:02  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_04_F_01_R_01                303471 tris
+2026-03-31 00:39:14  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_04_F_01_R_01           147035 verts  303471 tris  pcd=50000  colors=True   diag=756.6
+2026-03-31 00:39:14  INFO      src.preprocess  --- Processing 5/17: NAR_ST_43B_FR_05_F_01_R_01 ---
+2026-03-31 00:39:14  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_05_F_01_R_01                529556 tris
+2026-03-31 00:39:25  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_05_F_01_R_01           255305 verts  529556 tris  pcd=50000  colors=True   diag=967.1
+2026-03-31 00:39:25  INFO      src.preprocess  --- Processing 6/17: NAR_ST_43B_FR_06_F_01_R_01 ---
+2026-03-31 00:39:25  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_06_F_01_R_01                342717 tris
+2026-03-31 00:39:37  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_06_F_01_R_01           167211 verts  342717 tris  pcd=50000  colors=True   diag=684.7
+2026-03-31 00:39:37  INFO      src.preprocess  --- Processing 7/17: NAR_ST_43B_FR_07_F_01_R_01 ---
+2026-03-31 00:39:37  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_07_F_01_R_01                2751 tris
+2026-03-31 00:39:37  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_07_F_01_R_01           1318 verts  2751 tris  pcd=1318  colors=True   diag=76.2
+2026-03-31 00:39:37  INFO      src.preprocess  --- Processing 8/17: NAR_ST_43B_FR_08_F_01_R_01 ---
+2026-03-31 00:39:37  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_08_F_01_R_01                190578 tris
+2026-03-31 00:39:48  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_08_F_01_R_01           91840 verts  190578 tris  pcd=50000  colors=True   diag=604.9
+2026-03-31 00:39:48  INFO      src.preprocess  --- Processing 9/17: NAR_ST_43B_FR_09_F_01_R_01 ---
+2026-03-31 00:39:48  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_09_F_01_R_01                251242 tris
+2026-03-31 00:39:59  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_09_F_01_R_01           122608 verts  251242 tris  pcd=50000  colors=True   diag=779.1
+2026-03-31 00:39:59  INFO      src.preprocess  --- Processing 10/17: NAR_ST_43B_FR_10_F_01_R_01 ---
+2026-03-31 00:39:59  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_10_F_01_R_01                151651 tris
+2026-03-31 00:40:11  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_10_F_01_R_01           73711 verts  151651 tris  pcd=50000  colors=True   diag=615.6
+2026-03-31 00:40:11  INFO      src.preprocess  --- Processing 11/17: NAR_ST_43B_FR_11_F_01_R_01 ---
+2026-03-31 00:40:11  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_11_F_01_R_01                268967 tris
+2026-03-31 00:40:22  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_11_F_01_R_01           129789 verts  268967 tris  pcd=50000  colors=True   diag=741.7
+2026-03-31 00:40:22  INFO      src.preprocess  --- Processing 12/17: NAR_ST_43B_FR_12_F_01_R_01 ---
+2026-03-31 00:40:22  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_12_F_01_R_01                5881 tris
+2026-03-31 00:40:23  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_12_F_01_R_01           2864 verts  5881 tris  pcd=2864  colors=True   diag=97.2
+2026-03-31 00:40:23  INFO      src.preprocess  --- Processing 13/17: NAR_ST_43B_FR_13_F_01_R_01 ---
+2026-03-31 00:40:23  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_13_F_01_R_01                2751 tris
+2026-03-31 00:40:23  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_13_F_01_R_01           1318 verts  2751 tris  pcd=1318  colors=True   diag=76.2
+2026-03-31 00:40:23  INFO      src.preprocess  --- Processing 14/17: NAR_ST_43B_FR_14_F_01_R_01 ---
+2026-03-31 00:40:23  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_14_F_01_R_01                2708 tris
+2026-03-31 00:40:24  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_14_F_01_R_01           1288 verts  2708 tris  pcd=1288  colors=True   diag=72.3
+2026-03-31 00:40:24  INFO      src.preprocess  --- Processing 15/17: NAR_ST_43B_FR_15_F_01_R_01 ---
+2026-03-31 00:40:24  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_15_F_01_R_01                32652 tris
+2026-03-31 00:40:27  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_15_F_01_R_01           16327 verts  32652 tris  pcd=16327  colors=True   diag=37.5
+2026-03-31 00:40:27  INFO      src.preprocess  --- Processing 16/17: NAR_ST_43B_FR_16_F_01_R_01 ---
+2026-03-31 00:40:27  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_16_F_01_R_01                7949 tris
+2026-03-31 00:40:28  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_16_F_01_R_01           3831 verts  7949 tris  pcd=3831  colors=True   diag=115.2
+2026-03-31 00:40:28  INFO      src.preprocess  --- Processing 17/17: NAR_ST_43B_FR_17_F_01_R_01 ---
+2026-03-31 00:40:28  INFO      src.preprocess  Cache hit  NAR_ST_43B_FR_17_F_01_R_01                2403 tris
+2026-03-31 00:40:28  INFO      src.preprocess  Preprocessed  NAR_ST_43B_FR_17_F_01_R_01           1157 verts  2403 tris  pcd=1157  colors=True   diag=56.9
+2026-03-31 00:40:28  INFO      src.preprocess  Phase 0+1 complete: 17/17 fragments  total=154.7s
+2026-03-31 00:40:28  INFO      __main__  
+2026-03-31 00:40:28  INFO      __main__    Fragment                                     V_raw     V_dec   PCD_pts  Colors  Diag_mm
+2026-03-31 00:40:28  INFO      __main__    ------------------------------------------------------------------------------------------
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_01_F_01_R_02                11860704    227622     50000  True    807.6
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_02_F_01_R_01                12950276    254816     50000  True    803.1
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_03_F_01_R_01                10109479    204723     50000  True    893.0
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_04_F_01_R_01                 7764206    147035     50000  True    756.6
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_05_F_01_R_01                12823848    255305     50000  True    967.1
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_06_F_01_R_01                 9179652    167211     50000  True    684.7
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_07_F_01_R_01                   61311      1318      1318  True    76.2
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_08_F_01_R_01                 5251221     91840     50000  True    604.9
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_09_F_01_R_01                 6384319    122608     50000  True    779.1
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_10_F_01_R_01                 3990451     73711     50000  True    615.6
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_11_F_01_R_01                 6885553    129789     50000  True    741.7
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_12_F_01_R_01                  155260      2864      2864  True    97.2
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_13_F_01_R_01                   61311      1318      1318  True    76.2
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_14_F_01_R_01                   65056      1288      1288  True    72.2
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_15_F_01_R_01                   16327     16327     16327  True    37.5
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_16_F_01_R_01                  195698      3831      3831  True    115.2
+2026-03-31 00:40:28  INFO      __main__    NAR_ST_43B_FR_17_F_01_R_01                   54192      1157      1157  True    56.9
+2026-03-31 00:40:28  INFO      __main__  
+2026-03-31 00:40:28  INFO      __main__  ============================================================
+2026-03-31 00:40:28  INFO      __main__  PHASE 2-4: pairwise FPFH + RANSAC + ICP matching
+2026-03-31 00:40:28  INFO      __main__  ============================================================
+2026-03-31 00:40:28  INFO      src.pairwise_match  Phase 2-4: matching 17 fragments (136 pairs)
+2026-03-31 00:40:29  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_01_F_01_R_02                surface=50000 pts  down=49999 pts
+2026-03-31 00:40:29  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_02_F_01_R_01                surface=50000 pts  down=49997 pts
+2026-03-31 00:40:29  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_03_F_01_R_01                surface=50000 pts  down=49959 pts
+2026-03-31 00:40:29  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_04_F_01_R_01                surface=50000 pts  down=49764 pts
+2026-03-31 00:40:30  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_05_F_01_R_01                surface=50000 pts  down=50000 pts
+2026-03-31 00:40:30  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_06_F_01_R_01                surface=50000 pts  down=49961 pts
+2026-03-31 00:40:30  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_07_F_01_R_01                surface= 1318 pts  down= 890 pts
+2026-03-31 00:40:30  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_08_F_01_R_01                surface=50000 pts  down=46643 pts
+2026-03-31 00:40:30  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_09_F_01_R_01                surface=50000 pts  down=48846 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_10_F_01_R_01                surface=50000 pts  down=42368 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_11_F_01_R_01                surface=50000 pts  down=49658 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_12_F_01_R_01                surface= 2864 pts  down=1985 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_13_F_01_R_01                surface= 1318 pts  down= 874 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_14_F_01_R_01                surface= 1288 pts  down= 873 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_15_F_01_R_01                surface=16327 pts  down= 351 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_16_F_01_R_01                surface= 3831 pts  down=2636 pts
+2026-03-31 00:40:31  INFO      src.pairwise_match    FPFH  NAR_ST_43B_FR_17_F_01_R_01                surface= 1157 pts  down= 808 pts
+2026-03-31 00:40:51  INFO      src.pairwise_match    [ 47/136]  04_F_01_R_01         x 06_F_01_R_01          fit=0.271  rmse= 1.91  score=0.099  coll=0.169  1.2s
+2026-03-31 00:40:54  INFO      src.pairwise_match    [ 51/136]  04_F_01_R_01         x 10_F_01_R_01          fit=0.181  rmse= 2.18  score=0.050  coll=0.105  1.7s
+2026-03-31 00:41:03  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.676  collision=0.510 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.562  collision=0.408 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.625  collision=0.499 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.722  collision=0.560 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.742  collision=0.468 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    NEAR-DUPLICATE  (_01_R_01, _01_R_01)  icp_fit=1.000  collision=1.000 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.812  collision=0.388 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    [ 89/136]  07_F_01_R_01         x 15_F_01_R_01          fit=0.310  rmse= 1.45  score=0.160  coll=0.245  0.1s
+2026-03-31 00:41:04  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.717  collision=0.561 > 0.35
+2026-03-31 00:41:04  INFO      src.pairwise_match    [ 91/136]  07_F_01_R_01         x 17_F_01_R_01          fit=0.613  rmse= 2.34  score=0.134  coll=0.300  0.1s
+2026-03-31 00:41:11  INFO      src.pairwise_match    [122/136]  12_F_01_R_01         x 13_F_01_R_01          fit=0.297  rmse= 2.27  score=0.073  coll=0.159  0.1s
+2026-03-31 00:41:11  INFO      src.pairwise_match    [123/136]  12_F_01_R_01         x 14_F_01_R_01          fit=0.351  rmse= 2.14  score=0.100  coll=0.203  0.1s
+2026-03-31 00:41:12  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.722  collision=0.416 > 0.35
+2026-03-31 00:41:12  INFO      src.pairwise_match    [126/136]  12_F_01_R_01         x 17_F_01_R_01          fit=0.313  rmse= 1.51  score=0.156  coll=0.250  0.1s
+2026-03-31 00:41:12  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.799  collision=0.513 > 0.35
+2026-03-31 00:41:12  INFO      src.pairwise_match    [128/136]  13_F_01_R_01         x 15_F_01_R_01          fit=0.275  rmse= 2.29  score=0.065  coll=0.145  0.1s
+2026-03-31 00:41:12  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.667  collision=0.549 > 0.35
+2026-03-31 00:41:12  INFO      src.pairwise_match    [130/136]  13_F_01_R_01         x 17_F_01_R_01          fit=0.598  rmse= 2.25  score=0.149  coll=0.310  0.1s
+2026-03-31 00:41:12  INFO      src.pairwise_match    [131/136]  14_F_01_R_01         x 15_F_01_R_01          fit=0.289  rmse= 2.18  score=0.079  coll=0.173  0.1s
+2026-03-31 00:41:12  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.731  collision=0.363 > 0.35
+2026-03-31 00:41:12  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.777  collision=0.512 > 0.35
+2026-03-31 00:41:12  INFO      src.pairwise_match    NEAR-DUPLICATE  (_01_R_01, _01_R_01)  icp_fit=0.883  collision=0.774 > 0.35
+2026-03-31 00:41:13  INFO      src.pairwise_match    COLLISION-REJECTED  (_01_R_01, _01_R_01)  icp_fit=0.815  collision=0.683 > 0.35
+2026-03-31 00:41:13  INFO      src.pairwise_match    [136/136]  16_F_01_R_01         x 17_F_01_R_01          fit=0.245  rmse= 1.49  score=0.123  coll=0.205  0.1s
+2026-03-31 00:41:13  INFO      src.pairwise_match  Pairwise matching done: 11 / 136 pairs passed threshold  total=44.3s
+2026-03-31 00:41:13  INFO      __main__  Pairwise results: 11 pairs passed threshold
+2026-03-31 00:41:13  INFO      __main__  ============================================================
+2026-03-31 00:41:13  INFO      __main__  PHASE 5-6: MST assembly + cross-validation
+2026-03-31 00:41:13  INFO      __main__  ============================================================
+2026-03-31 00:41:13  INFO      src.assembly  Compatibility graph: 17 nodes  0 edges  (skipped: 11 below score, 0 high collision; threshold=0.20)
+2026-03-31 00:41:13  INFO      src.assembly  Anchor: NAR_ST_43B_FR_05_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  MST: 17 nodes  0 edges  17 component(s)
+2026-03-31 00:41:13  INFO      src.assembly  Component 1: sub-anchor = NAR_ST_43B_FR_01_F_01_R_02
+2026-03-31 00:41:13  INFO      src.assembly  Component 2: sub-anchor = NAR_ST_43B_FR_02_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 3: sub-anchor = NAR_ST_43B_FR_03_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 4: sub-anchor = NAR_ST_43B_FR_04_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 6: sub-anchor = NAR_ST_43B_FR_06_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 7: sub-anchor = NAR_ST_43B_FR_07_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 8: sub-anchor = NAR_ST_43B_FR_08_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 9: sub-anchor = NAR_ST_43B_FR_09_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 10: sub-anchor = NAR_ST_43B_FR_10_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 11: sub-anchor = NAR_ST_43B_FR_11_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 12: sub-anchor = NAR_ST_43B_FR_12_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 13: sub-anchor = NAR_ST_43B_FR_13_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 14: sub-anchor = NAR_ST_43B_FR_14_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 15: sub-anchor = NAR_ST_43B_FR_15_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 16: sub-anchor = NAR_ST_43B_FR_16_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Component 17: sub-anchor = NAR_ST_43B_FR_17_F_01_R_01
+2026-03-31 00:41:13  INFO      src.assembly  Assembly complete: 17 placed  0 unplaced  17 component(s)  0.0s
+2026-03-31 00:41:13  WARNING   src.assembly  17 disconnected components — many fragments could not be linked to the anchor
+2026-03-31 00:41:13  INFO      __main__  ============================================================
+2026-03-31 00:41:13  INFO      __main__  PHASE 7: global refinement
+2026-03-31 00:41:13  INFO      __main__  ============================================================
+2026-03-31 00:41:13  INFO      src.refine  Phase 7: global refinement disabled (refine.run_refinement: false)
+2026-03-31 00:41:13  INFO      __main__  ============================================================
+2026-03-31 00:41:13  INFO      __main__  PHASE 8-9: metrics + export
+2026-03-31 00:41:13  INFO      __main__  ============================================================
+2026-03-31 00:41:13  INFO      __main__  Metrics  -> metrics/summary.json
+2026-03-31 00:41:13  INFO      __main__  Pairs    -> metrics/pairwise_scores.json
+2026-03-31 00:41:13  INFO      __main__  Transforms -> transforms.json
+2026-03-31 00:41:14  INFO      src.visualize  Exported PLYs: 17 fragments  528103 total points -> outputs/runs/2026-03-31_00-37-53/meshes
+2026-03-31 00:41:14  INFO      src.visualize  Saved fragment_sizes.png
+2026-03-31 00:41:14  INFO      src.visualize  Saved pairwise_heatmap.png
+2026-03-31 00:41:15  INFO      src.visualize  Saved assembly_graph.png
+2026-03-31 00:41:15  INFO      src.visualize  Saved assembly_preview_fragment_colors.png
+2026-03-31 00:41:16  INFO      src.visualize  Saved assembly_preview_vertex_colors.png
+2026-03-31 00:41:16  INFO      __main__  ============================================================
+2026-03-31 00:41:16  INFO      __main__  Pipeline complete. Total time: 203.2s
+2026-03-31 00:41:16  INFO      __main__  Run saved in: outputs/runs/2026-03-31_00-37-53
