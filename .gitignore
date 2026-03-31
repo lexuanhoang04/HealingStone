@@ -1,0 +1,10 @@
+# Everything ignored by default
+*
+
+# Unignore only what we want to track
+!src/
+!src/**
+!requirements.txt
+!run_pipeline.py
+!config.yaml
+!.gitignore

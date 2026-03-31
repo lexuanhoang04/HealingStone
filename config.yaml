@@ -1,0 +1,87 @@
+seed: 42
+
+paths:
+  input_3d_dir: data/raw/3d
+  processed_dir: data/processed
+  output_dir: outputs
+
+mesh:
+  supported_extensions: [".ply", ".obj"]
+  # voxel_size drives vertex-clustering decimation (O(n), seconds per mesh).
+  # Larger voxel = fewer triangles. 2.0 mm gives ~150K-530K tris for large
+  # fragments, and <10K for small chips. decimation_target_triangles is not
+  # used; consistent geometric resolution is preferred over a fixed count.
+  voxel_size: 2.0
+  normals_radius: 10.0
+  normals_max_nn: 30
+  sample_points: 50000
+  sample_method: poisson_disk        # poisson_disk | uniform
+  use_cache: true
+
+# Candidate matching surface extraction (Phase 2)
+# mode: full_surface  -> use entire decimated mesh PCD (robust default)
+# mode: candidate_surface -> use curvature+colour to find fracture-like regions
+matching_surface:
+  mode: full_surface
+  # Parameters below only active when mode: candidate_surface
+  normal_variance_percentile: 25
+  color_std_percentile: 30           # ignored if mesh has no colours
+  min_region_fraction: 0.05          # fallback to full_surface if below this
+
+fpfh:
+  voxel_size: 2.0                    # mm (native scene units, not normalised)
+  radius: 10.0                       # mm (= 5 * voxel_size recommended)
+  max_nn: 100
+
+# Pairwise pair selection
+pairwise:
+  max_pairs_to_keep: 30               # keep top-N pairs by overlap_score
+
+# Pairwise registration (Phase 4)
+ransac:
+  max_correspondence_distance: 4.0   # mm
+  max_iterations: 100000
+  confidence: 0.999
+  min_fitness_to_keep: 0.1           # low threshold — missing material reduces fitness
+  n_workers: 4
+
+# ICP refinement after RANSAC (Phase 4 refinement step)
+# max_correspondence_distance is larger than RANSAC to accommodate surface gaps
+# from missing material. Point-to-plane is more robust to small normal offsets.
+icp:
+  run_icp: true
+  type: point_to_plane               # point_to_point | point_to_plane
+  max_correspondence_distance: 3.0   # mm — larger than RANSAC to tolerate gaps
+  max_iterations: 50
+
+# Global assembly (Phase 5 + 6)
+assembly:
+  strategy: greedy_mst
+  anchor_by: largest                 # largest | index
+  anchor_index: 0                    # used only if anchor_by: index
+  min_score_threshold: 0.15          # lower than "perfect" — missing material expected
+  collision_distance_mm: 2.0
+  validate_against_placed: true      # Phase 6: cross-validate against nearby placed frags
+  proximity_check_radius: 50.0       # mm — search radius for cross-validation neighbours
+  cross_validation_min_fitness: 0.10
+  cross_validation_collision_threshold: 0.50
+
+# Optional global ICP refinement after assembly (Phase 7)
+refine:
+  run_refinement: false
+  max_correspondence_distance: 3.0
+  max_iterations: 30
+
+# Evaluation
+evaluation:
+  run_synthetic_evaluation: false
+  synthetic_rotation_range_deg: 180
+
+logging:
+  level: INFO
+
+plots:
+  save_pairwise_heatmap: true
+  save_fragment_size_plot: true
+  save_assembly_graph: true
+  save_assembly_preview: true
